@@ -5,8 +5,8 @@
 
 namespace svr
 {
-    template<typename T>
-    typename remove_reference<T>::type&& move(T&& val)
+    template <typename T>
+    typename remove_reference<T>::type &&move(T &&val)
     {
         return static_cast<remove_reference<T>::type &&>(val);
     }
@@ -14,14 +14,12 @@ namespace svr
 
 #endif
 
-
 #include "is_rvalue_reference.h"
 
 #include <iostream>
 
 struct Custom
 {
-
 };
 
 void test()

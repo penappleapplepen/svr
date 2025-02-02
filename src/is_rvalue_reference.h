@@ -5,16 +5,14 @@
 
 namespace svr
 {
-    template<typename T>
+    template <typename T>
     struct is_rvalue_reference : svr::false_type
     {
-
     };
 
-    template<typename T>
-    struct is_rvalue_reference<T&&> : svr::true_type
+    template <typename T>
+    struct is_rvalue_reference<T &&> : svr::true_type
     {
-
     };
 }
 

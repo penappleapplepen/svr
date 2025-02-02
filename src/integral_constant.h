@@ -3,7 +3,7 @@
 
 namespace svr
 {
-    template<typename T, T v>
+    template <typename T, T v>
     struct integral_constant
     {
         static constexpr T value = v;
