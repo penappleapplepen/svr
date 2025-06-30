@@ -1,6 +1,7 @@
 main.*
 vc140.pdb
 build/
+build-tsan/
 Testing/
 settings.json
 # Ignore Visual Studio and CMake build files
