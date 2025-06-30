@@ -1,7 +1,15 @@
 #ifndef SVR_FIXED_THREAD_POOL
 #define SVR_FIXED_THREAD_POOL
 
-#include <bits/stdc++.h>
+#include <vector>
+#include <queue>
+#include <thread>
+#include <mutex>
+#include <condition_variable>
+#include <functional>
+#include <atomic>
+#include <iostream>
+#include <chrono>
 
 namespace svr
 {
