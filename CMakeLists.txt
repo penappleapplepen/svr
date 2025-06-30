@@ -3,8 +3,8 @@ cmake_minimum_required(VERSION 3.10)
 
 project(svr)
 
-# Require C++17
-set(CMAKE_CXX_STANDARD 17)
+# Require C++20
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
@@ -13,3 +13,6 @@ add_subdirectory(src)
 
 # Add tests directory
 add_subdirectory(tests)
+
+# Add benchmarks directory
+add_subdirectory(benchmarks)
