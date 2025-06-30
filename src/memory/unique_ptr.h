@@ -1,10 +1,12 @@
 #ifndef SVR_UNIQUE_PTR
 #define SVR_UNIQUE_PTR
 
-#include "forward.h"
-#include "test.h"
-#include "move.h"
-#include "memory"
+#include <memory>
+#include <utility>
+#include <type_traits>
+#include "templates/forward.h"
+#include "helpers/test.h"
+#include "templates/move.h"
 
 namespace svr
 {
@@ -42,7 +44,7 @@ namespace svr
                 other.d_ptr = nullptr;
             }
             
-            return d_ptr;
+            return *this;
         }
 
         TYPE *release()
@@ -83,7 +85,7 @@ namespace svr
     template<typename TYPE, typename DELETER, typename... Args>
     unique_ptr<TYPE> make_unique(DELETER&& deleter, Args&&... args)
     {
-        return svr::unique_ptr<TYPE, DELETER>(new TYPE{svr::forward<Args>(args)...}, deleter);
+        return svr::unique_ptr<TYPE, DELETER>(new TYPE{svr::forward<Args>(args)...}, svr::forward<DELETER>(deleter));
     }
 }
 

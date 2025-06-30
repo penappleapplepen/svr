@@ -1,5 +1,5 @@
 #ifndef SVR_FORWARD
-#define SVR_FOWRARD
+#define SVR_FORWARD
 
 #include "remove_reference.h"
 
