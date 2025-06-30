@@ -87,10 +87,4 @@ namespace svr
     }
 }
 
-void test()
-{
-    svr::unique_ptr<svr::Test> ptr = svr::make_unique<svr::Test>();
-    auto x = svr::move(ptr) ;
-}
-
 #endif

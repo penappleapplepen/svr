@@ -25,17 +25,4 @@ namespace svr
     inline constexpr bool is_same_v = is_same<Ts...>::value;
 };
 
-void test()
-{
-    // static_assert(svr::is_same_v<int, int>);
-    // static_assert(svr::is_same_v<double, int>);
-    // static_assert(svr::is_same_v<double, double>);
-    // static_assert(svr::is_same_v<float, double>);
-    // static_assert(svr::is_same_v<char, int>);
-    // static_assert(svr::is_same_v<int&, int>);
-    // static_assert(svr::is_same_v<double&, double>);
-
-    static_assert(svr::is_same_v<int, int, int, int, int>);
-}
-
 #endif

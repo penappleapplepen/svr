@@ -15,18 +15,3 @@ namespace svr
 }
 
 #endif
-
-
-struct Foo{};
-
-template<auto N>
-auto getVal()
-{
-    return N;
-}
-
-void test()
-{
-    svr::ignore = getVal<5>();
-    svr::ignore = getVal<Foo{}>();
-}

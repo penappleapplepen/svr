@@ -11,21 +11,3 @@ namespace svr
 }
 
 #endif
-
-#include <iostream>
-
-void test()
-{
-
-    const auto visitor = svr::overloads{
-        [](int i)
-        {
-            std::cout << "int\n";
-        },
-        [](double d)
-        {
-            std::cout << "double\n";
-        }};
-    visitor(5);
-    visitor(5.5);
-}

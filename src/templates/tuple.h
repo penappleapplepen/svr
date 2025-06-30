@@ -65,13 +65,3 @@ namespace svr
 }
 
 #endif
-
-#include <iostream>
-
-void test()
-{
-    svr::tuple<int, double, char> three(1, 42.0, 'a');
-    std::cout << svr::get<0>(three) << "\n";
-    std::cout << svr::get<1>(three) << "\n";
-    std::cout << svr::get<2>(three) << "\n";
-}

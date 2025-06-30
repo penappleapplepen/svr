@@ -1,3 +1,30 @@
 main.*
 vc140.pdb
 build/
+Testing/
+settings.json
+# Ignore Visual Studio and CMake build files
+*.vcxproj
+*.vcxproj.filters
+*.sln
+*.pdb
+*.obj
+*.idb
+*.tlog
+*.log
+*.user
+*.opensdf
+*.sdf
+*.cache
+*.dir/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+_deps/
+Debug/
+lib/
+x64/
+# Ignore test binaries
+svr_tests.exe
+svr.exe
