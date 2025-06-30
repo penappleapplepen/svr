@@ -90,7 +90,3 @@ namespace svr
 
 #endif
 
-void test()
-{
-
-}
