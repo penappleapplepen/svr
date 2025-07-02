@@ -1,19 +1,19 @@
 #include <gtest/gtest.h>
-#include "multithreading/spin_lock.h"
+#include "multithreading/spinlock/spinlock.h"
 #include <thread>
 #include <vector>
 
 using namespace svr;
 
 TEST(SpinLockTest, SingleThreadLockUnlock) {
-    SpinLock lock;
+    BasicSpinLockWithAtomicFlag lock;
     lock.lock();
     lock.unlock();
     SUCCEED();
 }
 
 TEST(SpinLockTest, MultiThreadedIncrement) {
-    SpinLock lock;
+    BasicSpinLockWithAtomicFlag lock;
     int counter = 0;
     const int numThreads = 8;
     const int incrementsPerThread = 10000;
