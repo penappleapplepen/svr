@@ -37,7 +37,7 @@ add_executable(svr_tests ${TEST_SOURCES})
 target_include_directories(svr_tests PRIVATE ${CMAKE_SOURCE_DIR}/src)
 
 # Link with GoogleTest and pthread (if needed)
-target_link_libraries(svr_tests PRIVATE gtest_main svr_lib)
+target_link_libraries(svr_tests PRIVATE gtest_main svr)
 target_include_directories(svr_tests PRIVATE ${gtest_SOURCE_DIR}/include)
 
 # Add a test to CTest

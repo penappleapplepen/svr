@@ -9,7 +9,10 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 include_directories(${CMAKE_SOURCE_DIR}/src)
 
-file(GLOB BENCH_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
 
-add_executable(svr_benchmarks ${BENCH_SOURCES})
-target_link_libraries(svr_benchmarks PRIVATE pthread)
+# Build each benchmark as a separate executable to avoid multiple main() errors
+add_executable(bench_spin_lock_variants bench_spin_lock_variants.cpp)
+target_link_libraries(bench_spin_lock_variants PRIVATE pthread svr)
+
+add_executable(bench_spsc bench_spsc.cpp)
+target_link_libraries(bench_spsc PRIVATE pthread svr)
